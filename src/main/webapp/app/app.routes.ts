@@ -10,9 +10,8 @@ import LoginComponent from './login/login.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomeComponent,
-    title: 'home.title',
+      path: '',
+      loadChildren: () => import('./home/home.routes').then(m => m.HOME_ROUTES)
   },
   {
     path: 'admin',

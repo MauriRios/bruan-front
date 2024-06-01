@@ -1,0 +1,30 @@
+.container {
+    position: relative;
+    padding: 1rem;
+    margin: 1rem -.75rem 0;
+    border: solid #dee2e6;
+    border-width: 1px 0 0;
+    overflow: hidden;
+}
+
+  
+  .carousel {
+    max-width: 85%; /* Evita que el carrusel sea más ancho que el tamaño fijo */
+    margin: 0 auto; 
+  } 
+ 
+
+.carousel-indicators{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+p{
+    overflow-wrap: break-word;
+}

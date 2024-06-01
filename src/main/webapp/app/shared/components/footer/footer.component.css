@@ -1,0 +1,37 @@
+footer{
+    background-color: #06c09e;
+}
+
+.static-icon , .fa-brands{
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.fa-brands:hover{
+    color: rgb(0, 0, 0);
+}
+
+.colum{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+a, span, h5{
+    color: rgb(255, 255, 255); ;
+}
+
+a:hover {
+    color: rgb(0, 0, 0);
+    transform: translate(5px, 0px);
+    transition: all 0.3s ease-in-out;
+}
+
+a:not(:hover){
+    transform: translate(0px, 0px);
+    transition: all 0.3s ease-in-out;
+}
+p{
+    color: white;
+}

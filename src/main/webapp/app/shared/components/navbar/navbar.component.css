@@ -1,0 +1,54 @@
+
+.navbar {
+    background-color: #06c09e;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .navbar-logo {
+    margin-right: auto;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-left: 20px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+
+@keyframes smoothScroll {
+    from {
+    top: -100%;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+.sticky_element {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    animation: smoothScroll .7s none;
+    border-bottom: 1px solid transparent;
+    -webkit-box-shadow: 0 20px 20px -20px rgb(0 0 0 / 25%);
+    -moz-box-shadow: 0 20px 20px -20px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 20px 20px -20px rgb(0 0 0 / 25%);
+    background-color: rgba(6, 192, 158, 0.96);
+}

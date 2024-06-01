@@ -29,7 +29,7 @@
 }
   
 .card-actions button {
-    background-color: #06c09e; 
+    background-color: #78c2ad; 
     border: none;
     color: #fff; 
     padding: 10px 20px; 
@@ -46,4 +46,8 @@
 .card-actions button span {
     margin-right: 10px; 
     font-weight: bold; 
+}
+
+.card-title{
+    color: #000;
 }

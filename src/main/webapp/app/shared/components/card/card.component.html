@@ -10,17 +10,17 @@
       </div>
 @for ( card of cards | filterBy:title | paginate: {itemsPerPage: 4, currentPage: page} ; track card ) {
           <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-            <mat-card class="card image-container" >
-              <img mat-card-image class="image" [src]="card.image" alt="Card Image">
-              <mat-card-content>
-                <h4>{{ card.title }}</h4>
-                <p>{{ card.description }}</p>
-                <p>Precio: ${{ card.price }}</p>
-              </mat-card-content>
-              <mat-card-actions class="mat-card-actions">
-                <button mat-button translateTopHover>Agregar al carrito</button>
-              </mat-card-actions>
-            </mat-card>
+            <div class="card image-container">
+              <img class="card-img-top image" [src]="card.image" alt="Card Image">
+              <div class="card-body">
+                <h4 class="card-title">{{ card.title }}</h4>
+                <p class="card-text">{{ card.description }}</p>
+                <p class="card-text">Precio: ${{ card.price }}</p>
+              </div>
+              <div class="card-footer card-actions">
+                <button class="btn" translateTopHover>Agregar al carrito</button>
+              </div>
+            </div>
           </div>
 } 
 </div>

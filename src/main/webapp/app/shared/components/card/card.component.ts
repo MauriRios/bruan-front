@@ -12,7 +12,7 @@ import { NgxPaginationModule } from "ngx-pagination";
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [ CommonModule, MatCardModule, MatButtonModule, AnimationTranslateTopHoverDirective, NgxPaginationModule, FilterByPipe, FormsModule ],
+  imports: [ CommonModule, AnimationTranslateTopHoverDirective, NgxPaginationModule, FilterByPipe, FormsModule ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })

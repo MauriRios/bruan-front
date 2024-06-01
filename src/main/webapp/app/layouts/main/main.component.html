@@ -6,13 +6,11 @@
 </div>
 
 <div class="container-fluid">
-  <div class="card jh-card">
     <router-outlet></router-outlet>
-  </div>
 
-  <a class="to-top btn" (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled }">
-    <i class="fas fa-arrow-up"></i>
-  </a>
+    <a class="to-top btn" (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled }">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
 </div>
 <div>

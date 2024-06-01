@@ -5,16 +5,15 @@ import dayjs from 'dayjs/esm';
 
 import { AccountService } from 'app/core/auth/account.service';
 import { AppPageTitleStrategy } from 'app/app-page-title-strategy';
-import FooterComponent from '../footer/footer.component';
-import PageRibbonComponent from '../profiles/page-ribbon.component';
-import { HomePageComponent } from "../../home/home-page/home-page.component";
+import { FooterHomeComponent } from 'app/shared/components/footer/footer.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
     standalone: true,
     selector: 'jhi-main',
     templateUrl: './main.component.html',
     providers: [AppPageTitleStrategy],
-    imports: [RouterOutlet, FooterComponent, PageRibbonComponent, HomePageComponent]
+    imports: [CommonModule, RouterOutlet, FooterHomeComponent ]
 })
 export default class MainComponent implements OnInit {
   private renderer: Renderer2;
@@ -24,12 +23,18 @@ export default class MainComponent implements OnInit {
   private accountService = inject(AccountService);
   private translateService = inject(TranslateService);
   private rootRenderer = inject(RendererFactory2);
+  // eslint-disable-next-line @typescript-eslint/member-ordering
+  public windowScrolled = false;
+
 
   constructor() {
     this.renderer = this.rootRenderer.createRenderer(document.querySelector('html'), null);
   }
 
   ngOnInit(): void {
+    window.addEventListener('scroll', () => {
+      this.windowScrolled = window.pageYOffset !== 0;
+    });
     // try to log in automatically
     this.accountService.identity().subscribe();
 
@@ -38,5 +43,10 @@ export default class MainComponent implements OnInit {
       dayjs.locale(langChangeEvent.lang);
       this.renderer.setAttribute(document.querySelector('html'), 'lang', langChangeEvent.lang);
     });
+  }
+
+  scrollToTop(): void {
+    window.scrollTo(0, 0);
+  
   }
 }

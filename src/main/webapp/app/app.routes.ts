@@ -23,7 +23,12 @@ const routes: Routes = [
   },
   {
     path: 'account',
+    data: {
+      authorities: [Authority.ADMIN],
+    },
+    canActivate: [UserRouteAccessService],
     loadChildren: () => import('./account/account.route'),
+    
   },
   {
     path: 'login',
@@ -32,6 +37,10 @@ const routes: Routes = [
   },
   {
     path: '',
+    data: {
+      authorities: [Authority.ADMIN],
+    },
+    canActivate: [UserRouteAccessService],
     loadChildren: () => import(`./entities/entity.routes`),
   },
   ...errorRoute,

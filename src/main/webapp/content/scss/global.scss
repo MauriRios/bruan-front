@@ -6,13 +6,27 @@
 /* ==============================================================
 Bootstrap tweaks
 ===============================================================*/
+html, body { 
+  height: 100%;
+}
+html {
+box-sizing: border-box;
+scroll-behavior: smooth;
+overflow-x: hidden;
 
-body,
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 300;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lexend', sans-serif;
+  font-weight: 400; 
+}
+
+p, a{
+  font-family: 'Lexend', sans-serif;
+  font-weight: 300;  
 }
 
 a:hover {
@@ -208,3 +222,31 @@ angular-cli removes postcss-rtl processed inline css, processed rules must be ad
   }
 }
 /* jhipster-needle-scss-add-main JHipster will add new css style */
+
+/* Boton push to top */
+.to-top {
+  z-index: 9999;
+  bottom: 80px;
+  cursor: pointer;
+  margin: 0 8px 12px 0;
+  padding: 8px 13px;
+  position: fixed;
+  right: 20px;
+  border-radius: 100%;
+  background-color: rgb(122, 122, 122, 0.6);
+  display: none;
+
+}
+
+.to-top:hover{
+  color: white;
+  background-color: black;
+ 
+}
+
+.show-scrollTop {
+  display: block;
+  transition: all 0.2s ease-in-out;
+
+}
+/* Fin boton push to top*/

@@ -2,7 +2,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeNavigationComponent } from './home-navigation/home-navigation.component';
 import { AboutUsComponent } from '../shared/components/about-us/about-us.component';
 import { NgModule } from '@angular/core';
-import { NavbarHomeComponent } from 'app/shared/components/navbar/navbar.component';
+import { NavbarHomeComponent } from 'app/shared/components/navbar-home/navbar-home.component';
 import { FooterHomeComponent } from 'app/shared/components/footer/footer.component';
 
 export const HOME_ROUTES: Routes = [ 

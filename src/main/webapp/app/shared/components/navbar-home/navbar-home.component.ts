@@ -6,8 +6,8 @@ import { RouterLink } from '@angular/router';
   selector: 'app-home-navbar',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  templateUrl: './navbar-home.component.html',
+  styleUrl: './navbar-home.component.css'
 })
 export class NavbarHomeComponent implements OnInit {
 

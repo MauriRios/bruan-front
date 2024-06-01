@@ -1,0 +1,119 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-product-heading" data-cy="ProductCreateUpdateHeading" jhiTranslate="bruanApp.product.home.createOrEditLabel">
+        Crear o editar Product
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        @if (editForm.controls.id.value !== null) {
+          <div class="mb-3">
+            <label class="form-label" for="field_id" jhiTranslate="bruanApp.product.id">ID</label>
+            <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+          </div>
+        }
+
+        <div class="mb-3">
+          <label class="form-label" for="field_productName" jhiTranslate="bruanApp.product.productName">Product Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="productName"
+            id="field_productName"
+            data-cy="productName"
+            formControlName="productName"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_productDescription" jhiTranslate="bruanApp.product.productDescription"
+            >Product Description</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="productDescription"
+            id="field_productDescription"
+            data-cy="productDescription"
+            formControlName="productDescription"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_price" jhiTranslate="bruanApp.product.price">Price</label>
+          <input type="number" class="form-control" name="price" id="field_price" data-cy="price" formControlName="price" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_createDate" jhiTranslate="bruanApp.product.createDate">Create Date</label>
+          <div class="d-flex">
+            <input
+              id="field_createDate"
+              data-cy="createDate"
+              type="datetime-local"
+              class="form-control"
+              name="createDate"
+              formControlName="createDate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_lastModifyDate" jhiTranslate="bruanApp.product.lastModifyDate">Last Modify Date</label>
+          <div class="d-flex">
+            <input
+              id="field_lastModifyDate"
+              data-cy="lastModifyDate"
+              type="datetime-local"
+              class="form-control"
+              name="lastModifyDate"
+              formControlName="lastModifyDate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label" for="field_isActive" jhiTranslate="bruanApp.product.isActive">Is Active</label>
+          <input type="checkbox" class="form-check" name="isActive" id="field_isActive" data-cy="isActive" formControlName="isActive" />
+        </div>
+
+        <div class="mb-3">
+          <label for="field_categories" jhiTranslate="bruanApp.product.categories">Categories</label>
+          <select
+            class="form-control"
+            id="field_categories"
+            data-cy="categories"
+            multiple
+            name="categories"
+            formControlName="categories"
+            [compareWith]="compareCategory"
+          >
+            @for (categoryOption of categoriesSharedCollection; track $index) {
+              <option [ngValue]="categoryOption">{{ categoryOption.id }}</option>
+            }
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancelar</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Guardar</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

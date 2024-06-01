@@ -1,0 +1,30 @@
+{
+  "annotations": {
+    "changelogDate": "20240526004908"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "categoryName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "categoryDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifyDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Category",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceImpl"
+}

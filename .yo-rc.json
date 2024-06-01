@@ -1,0 +1,22 @@
+{
+  "generator-jhipster": {
+    "baseName": "bruan",
+    "clientFramework": "angular",
+    "clientTestFrameworks": [],
+    "clientTheme": "minty",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1716679348404,
+    "devServerPort": 4200,
+    "enableTranslation": true,
+    "entities": ["Product", "Category"],
+    "jhipsterVersion": "8.4.0",
+    "languages": ["es", "en"],
+    "lastLiquibaseTimestamp": 1716684548000,
+    "microfrontend": null,
+    "microfrontends": [],
+    "nativeLanguage": "es",
+    "skipServer": true,
+    "testFrameworks": [],
+    "withAdminUi": true
+  }
+}

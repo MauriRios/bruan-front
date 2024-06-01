@@ -1,0 +1,45 @@
+{
+  "annotations": {
+    "changelogDate": "20240526004907"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "productName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifyDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Product",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "category",
+      "relationshipName": "categories",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

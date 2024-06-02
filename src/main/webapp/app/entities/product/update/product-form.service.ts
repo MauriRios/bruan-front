@@ -35,6 +35,8 @@ type ProductFormGroupContent = {
   productName: FormControl<ProductFormRawValue['productName']>;
   productDescription: FormControl<ProductFormRawValue['productDescription']>;
   price: FormControl<ProductFormRawValue['price']>;
+  image: FormControl<ProductFormRawValue['image']>;
+  imageContentType: FormControl<ProductFormRawValue['imageContentType']>;
   createDate: FormControl<ProductFormRawValue['createDate']>;
   lastModifyDate: FormControl<ProductFormRawValue['lastModifyDate']>;
   isActive: FormControl<ProductFormRawValue['isActive']>;
@@ -61,6 +63,8 @@ export class ProductFormService {
       productName: new FormControl(productRawValue.productName),
       productDescription: new FormControl(productRawValue.productDescription),
       price: new FormControl(productRawValue.price),
+      image: new FormControl(productRawValue.image),
+      imageContentType: new FormControl(productRawValue.imageContentType),
       createDate: new FormControl(productRawValue.createDate),
       lastModifyDate: new FormControl(productRawValue.lastModifyDate),
       isActive: new FormControl(productRawValue.isActive),

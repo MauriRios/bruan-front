@@ -18,6 +18,11 @@
       "fieldType": "Double"
     },
     {
+      "fieldName": "image",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
       "fieldName": "createDate",
       "fieldType": "Instant"
     },

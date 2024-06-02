@@ -13,12 +13,12 @@ const routes: Routes = [
     loadChildren: () => import('./admin/authority/authority.routes'),
   },
   {
-    path: 'admin/product',
+    path: 'product',
     data: { pageTitle: 'bruanApp.product.home.title' },
     loadChildren: () => import('./product/product.routes'),
   },
   {
-    path: 'admin/category',
+    path: 'category',
     data: { pageTitle: 'bruanApp.category.home.title' },
     loadChildren: () => import('./category/category.routes'),
   },

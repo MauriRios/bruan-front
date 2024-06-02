@@ -2,6 +2,7 @@ entity Product {
 	productName String
     productDescription String
     price Double
+    image ImageBlob
     createDate Instant
     lastModifyDate Instant
     isActive Boolean

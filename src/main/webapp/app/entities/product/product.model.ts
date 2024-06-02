@@ -6,6 +6,8 @@ export interface IProduct {
   productName?: string | null;
   productDescription?: string | null;
   price?: number | null;
+  image?: string | null;
+  imageContentType?: string | null;
   createDate?: dayjs.Dayjs | null;
   lastModifyDate?: dayjs.Dayjs | null;
   isActive?: boolean | null;

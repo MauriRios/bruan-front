@@ -7,19 +7,21 @@ export const sampleWithRequiredData: IProduct = {
 };
 
 export const sampleWithPartialData: IProduct = {
-  id: 32214,
-  productName: 'yet borrower unless',
-  price: 15385.87,
-  isActive: false,
+  id: 26963,
+  productName: 'slim sometimes gah',
+  price: 28492.14,
+  lastModifyDate: dayjs('2024-05-25T09:42'),
 };
 
 export const sampleWithFullData: IProduct = {
-  id: 20640,
-  productName: 'blissfully',
-  productDescription: 'harness',
-  price: 23037.71,
-  createDate: dayjs('2024-05-25T10:56'),
-  lastModifyDate: dayjs('2024-05-25T14:25'),
+  id: 9474,
+  productName: 'but',
+  productDescription: 'past',
+  price: 18956.85,
+  image: '../fake-data/blob/hipster.png',
+  imageContentType: 'unknown',
+  createDate: dayjs('2024-05-25T14:25'),
+  lastModifyDate: dayjs('2024-05-25T22:30'),
   isActive: true,
 };
 

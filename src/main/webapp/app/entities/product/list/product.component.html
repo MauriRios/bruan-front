@@ -65,6 +65,13 @@
                 <fa-icon class="p-1" icon="sort"></fa-icon>
               </div>
             </th>
+            <th scope="col" jhiSortBy="image">
+              <div class="d-flex">
+                <span jhiTranslate="bruanApp.product.image">Image</span>
+
+                <fa-icon class="p-1" icon="sort"></fa-icon>
+              </div>
+            </th>
             <th scope="col" jhiSortBy="createDate">
               <div class="d-flex">
                 <span jhiTranslate="bruanApp.product.createDate">Create Date</span>
@@ -98,6 +105,14 @@
               <td>{{ product.productName }}</td>
               <td>{{ product.productDescription }}</td>
               <td>{{ product.price }}</td>
+              <td>
+                @if (product.image) {
+                  <a (click)="openFile(product.image, product.imageContentType)">
+                    <img [src]="'data:' + product.imageContentType + ';base64,' + product.image" style="max-height: 30px" alt="product" />
+                  </a>
+                  <span>{{ product.imageContentType }}, {{ byteSize(product.image) }}</span>
+                }
+              </td>
               <td>{{ product.createDate | formatMediumDatetime }}</td>
               <td>{{ product.lastModifyDate | formatMediumDatetime }}</td>
               <td>{{ product.isActive }}</td>

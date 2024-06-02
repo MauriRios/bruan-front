@@ -27,6 +27,21 @@
           <dd>
             <span>{{ product()!.price }}</span>
           </dd>
+          <dt><span jhiTranslate="bruanApp.product.image">Image</span></dt>
+          <dd>
+            @if (product()!.image) {
+              <div>
+                <a (click)="openFile(product()!.image ?? '', product()!.imageContentType)">
+                  <img
+                    [src]="'data:' + product()!.imageContentType + ';base64,' + product()!.image"
+                    style="max-width: 100%"
+                    alt="product"
+                  />
+                </a>
+                {{ product()!.imageContentType }}, {{ byteSize(product()!.image ?? '') }}
+              </div>
+            }
+          </dd>
           <dt><span jhiTranslate="bruanApp.product.createDate">Create Date</span></dt>
           <dd>
             <span>{{ product()!.createDate | formatMediumDatetime }}</span>

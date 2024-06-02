@@ -21,6 +21,7 @@
       "productName": "Product Name",
       "productDescription": "Product Description",
       "price": "Price",
+      "image": "Image",
       "createDate": "Create Date",
       "lastModifyDate": "Last Modify Date",
       "isActive": "Is Active",

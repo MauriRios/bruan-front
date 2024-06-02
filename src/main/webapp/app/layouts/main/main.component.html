@@ -5,14 +5,13 @@
     <router-outlet name="navbarHome"></router-outlet>
 </div>
 
-<div class="container-fluid">
-    <router-outlet></router-outlet>
 
-    <a class="to-top btn" (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled }">
-        <i class="fas fa-arrow-up"></i>
-    </a>
+<router-outlet></router-outlet>
 
-</div>
+<a class="to-top btn" (click)="scrollToTop()" [ngClass]="{ 'show-scrollTop': windowScrolled }">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
 <div>
     <router-outlet name="footerHome"></router-outlet>
 </div>

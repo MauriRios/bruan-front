@@ -1,28 +1,44 @@
 <div class="container">
     <div class="row justify-content-center text-center">
       <h1>Todos Nuestros Productos</h1>
-      <div class="row">
+      <!-- <div class="row">
         <div class="col">
-          <div class="form-group">
+          <div class="form-group m-2 col-2">
             <input type="text" class="form-control" name="filterName" placeholder="filtra por nombre..." [(ngModel)]="title">
           </div>
         </div>
+      </div> -->
+      <div class="row justify-content-left p-0">
+        <div class="col-6 p-0">
+          <div class="form-group m-3">
+            <input type="text" class="form-control form-control-lg border-primary shadow-sm"
+            name="filterName"
+            placeholder="Filtrar por nombre..."
+            [(ngModel)]="productName"
+            (ngModelChange)="filterProducts()">
+          </div>
+        </div>
       </div>
-@for ( card of cards | filterBy:title | paginate: {itemsPerPage: 4, currentPage: page} ; track card ) {
+@for ( product of filteredProducts | filterBy:productName | paginate: {itemsPerPage: 4, currentPage: page} ; track product ) {
           <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
             <div class="card image-container">
-              <img class="card-img-top image" [src]="card.image" alt="Card Image">
+              <img class="card-img-top image" [src]="product.imageContentType" alt="Card Image">
               <div class="card-body">
-                <h4 class="card-title">{{ card.title }}</h4>
-                <p class="card-text">{{ card.description }}</p>
-                <p class="card-text">Precio: ${{ card.price }}</p>
+                <h4 class="card-title">{{ product.productName }}</h4>
+                <p class="card-text">{{ product.description }}</p>
+                <p class="card-text">Precio: ${{ product.price }}</p>
               </div>
               <div class="card-footer card-actions">
                 <button class="btn" translateTopHover>Agregar al carrito</button>
               </div>
             </div>
           </div>
-} 
+} @empty {
+    <div class="alert alert-info text-center" role="alert">
+      No se encontraron productos que coincidan con tu búsqueda.
+    </div>
+}
+
 </div>
 </div>
 

@@ -4,6 +4,8 @@ import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { Card, mockCards } from "app/core/models/card";
+import { ProductService } from "app/entities/product/service/product.service";
+import { IProduct } from 'app/entities/product/product.model';
 import { AnimationTranslateTopHoverDirective } from "app/shared/directives/animation-translate-top-hover.directive";
 import { FilterByPipe } from "app/shared/pipes/filterBy/filter-by.pipe";
 import { NgxPaginationModule } from "ngx-pagination";
@@ -18,23 +20,45 @@ import { NgxPaginationModule } from "ngx-pagination";
 })
 export class ProductCardComponent implements OnInit {
 
-  public cards : Card[];
+  products: IProduct[] = [];
+  filteredProducts: IProduct[] = [];
+
   public page!: number;
   
-  title = '';
+  productName: string = '';
 
   constructor(
-
+    private productService: ProductService
   ) {
-    this.cards = mockCards
 
   }
 
   // eslint-disable-next-line @angular-eslint/no-empty-lifecycle-method
   ngOnInit(): void {
-    
+    this.loadProducts();
   }
 
+  loadProducts(): void {
+    this.productService.query().subscribe(
+      (res) => {
+        this.products = res.body ?? [];
+        this.filteredProducts = this.products; // Inicialmente, mostrar todos los productos
+      },
+      (error) => {
+        console.error('Error al cargar productos:', error);
+      }
+    );
+  }
+
+  filterProducts(): void {
+    if (this.productName) {
+      this.filteredProducts = this.products.filter(product =>
+        product.productName?.toLowerCase().includes(this.productName) && product.isActive === true
+      );
+    } else {
+      this.filteredProducts = this.products;
+    }
+  }
 
 }
 

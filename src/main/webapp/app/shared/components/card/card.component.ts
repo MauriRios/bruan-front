@@ -60,6 +60,13 @@ export class ProductCardComponent implements OnInit {
     }
   }
 
+  public getImageSrc(product: IProduct): string | undefined {
+    if (product.image && product.imageContentType) {
+      return `data:${product.imageContentType};base64,${product.image}`;
+    }
+    return undefined;
+  }
+
 }
 
 

@@ -1,5 +1,5 @@
 entity Product {
-	productName String
+    productName String
     productDescription String
     price Double
     image ImageBlob
@@ -9,14 +9,22 @@ entity Product {
 }
 
 entity Category {
-	categoryName String
+    categoryName String
     categoryDescription String
     createDate Instant
     lastModifyDate Instant
 }
 
+entity SliderConfiguration{
+    sliderName String
+    sliderDescription String
+    image ImageBlob
+    createDate Instant
+    lastModifyDate Instant
+}
+
 relationship ManyToMany {
-	Product{categories} to Category
+    Product{categories} to Category
 }
 
 paginate * with pagination

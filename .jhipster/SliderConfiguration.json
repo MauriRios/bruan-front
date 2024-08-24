@@ -1,0 +1,35 @@
+{
+  "annotations": {
+    "changelogDate": "20240824182728"
+  },
+  "applications": "*",
+  "dto": "mapstruct",
+  "fields": [
+    {
+      "fieldName": "sliderName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sliderDescription",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "byte[]",
+      "fieldTypeBlobContent": "image"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifyDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "SliderConfiguration",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,28 @@
+{
+  "bruanApp": {
+    "sliderConfiguration": {
+      "home": {
+        "title": "Slider Configurations",
+        "refreshListLabel": "Refrescar lista",
+        "createLabel": "Crear nuevo Slider Configuration",
+        "createOrEditLabel": "Crear o editar Slider Configuration",
+        "notFound": "Ningún Slider Configurations encontrado"
+      },
+      "created": "Un nuevo Slider Configuration ha sido creado con el identificador {{ param }}",
+      "updated": "Un Slider Configuration ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Slider Configuration ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Slider Configuration {{ id }}?"
+      },
+      "detail": {
+        "title": "Slider Configuration"
+      },
+      "id": "ID",
+      "sliderName": "Slider Name",
+      "sliderDescription": "Slider Description",
+      "image": "Image",
+      "createDate": "Create Date",
+      "lastModifyDate": "Last Modify Date"
+    }
+  }
+}

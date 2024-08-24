@@ -1,0 +1,63 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (sliderConfiguration()) {
+      <div>
+        <h2 data-cy="sliderConfigurationDetailsHeading">
+          <span jhiTranslate="bruanApp.sliderConfiguration.detail.title">Slider Configuration</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ sliderConfiguration()!.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="bruanApp.sliderConfiguration.sliderName">Slider Name</span></dt>
+          <dd>
+            <span>{{ sliderConfiguration()!.sliderName }}</span>
+          </dd>
+          <dt><span jhiTranslate="bruanApp.sliderConfiguration.sliderDescription">Slider Description</span></dt>
+          <dd>
+            <span>{{ sliderConfiguration()!.sliderDescription }}</span>
+          </dd>
+          <dt><span jhiTranslate="bruanApp.sliderConfiguration.image">Image</span></dt>
+          <dd>
+            @if (sliderConfiguration()!.image) {
+              <div>
+                <a (click)="openFile(sliderConfiguration()!.image ?? '', sliderConfiguration()!.imageContentType)">
+                  <img
+                    [src]="'data:' + sliderConfiguration()!.imageContentType + ';base64,' + sliderConfiguration()!.image"
+                    style="max-width: 100%"
+                    alt="sliderConfiguration"
+                  />
+                </a>
+                {{ sliderConfiguration()!.imageContentType }}, {{ byteSize(sliderConfiguration()!.image ?? '') }}
+              </div>
+            }
+          </dd>
+          <dt><span jhiTranslate="bruanApp.sliderConfiguration.createDate">Create Date</span></dt>
+          <dd>
+            <span>{{ sliderConfiguration()!.createDate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="bruanApp.sliderConfiguration.lastModifyDate">Last Modify Date</span></dt>
+          <dd>
+            <span>{{ sliderConfiguration()!.lastModifyDate | formatMediumDatetime }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Volver</span>
+        </button>
+
+        <button type="button" [routerLink]="['/slider-configuration', sliderConfiguration()!.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editar</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>

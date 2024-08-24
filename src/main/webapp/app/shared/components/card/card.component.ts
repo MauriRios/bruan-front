@@ -38,7 +38,7 @@ export class ProductCardComponent implements OnInit {
     this.loadProducts();
   }
 
-  loadProducts(): void {
+  public loadProducts(): void {
     this.productService.query().subscribe(
       (res) => {
         this.products = res.body ?? [];
@@ -50,7 +50,7 @@ export class ProductCardComponent implements OnInit {
     );
   }
 
-  filterProducts(): void {
+  public filterProducts(): void {
     if (this.productName) {
       this.filteredProducts = this.products.filter(product =>
         product.productName?.toLowerCase().includes(this.productName) && product.isActive === true

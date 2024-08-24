@@ -22,6 +22,11 @@ const routes: Routes = [
     data: { pageTitle: 'bruanApp.category.home.title' },
     loadChildren: () => import('./category/category.routes'),
   },
+  {
+    path: 'slider-configuration',
+    data: { pageTitle: 'bruanApp.sliderConfiguration.home.title' },
+    loadChildren: () => import('./slider-configuration/slider-configuration.routes'),
+  },
   /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
 ];
 

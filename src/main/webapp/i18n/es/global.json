@@ -9,7 +9,8 @@
         "main": "Entidades",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)",
         "product": "Product",
-        "category": "Category"
+        "category": "Category",
+        "sliderConfiguration": "Slider Configuration"
       },
       "account": {
         "main": "Cuenta",

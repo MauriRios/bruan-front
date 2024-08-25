@@ -3,7 +3,6 @@
 import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { FormsModule } from "@angular/forms";
-import { Card, mockCards } from "app/core/models/card";
 import { ProductService } from "app/entities/product/service/product.service";
 import { IProduct } from 'app/entities/product/product.model';
 import { AnimationTranslateTopHoverDirective } from "app/shared/directives/animation-translate-top-hover.directive";

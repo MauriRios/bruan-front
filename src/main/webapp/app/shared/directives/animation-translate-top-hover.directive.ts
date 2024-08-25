@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { Directive, HostListener, ElementRef, Renderer2 } from '@angular/core';
 
 
 @Directive({
+  // eslint-disable-next-line @angular-eslint/directive-selector
   selector: '[translateTopHover]',
   standalone: true
 })

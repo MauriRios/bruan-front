@@ -1,0 +1,17 @@
+.text-center h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .text-center i {
+    font-size: 24px;
+    color: #78c2ad;
+  }
+  
+  .icon-size {
+    font-size: 2rem; 
+    color: #78c2ad;
+  }
+  

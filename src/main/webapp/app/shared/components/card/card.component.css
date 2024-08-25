@@ -62,4 +62,23 @@
     .card-title {
       font-size: calc(0.49rem + 1vw);
     }
-  }
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0; /* Ajusta el margen según sea necesario */
+}
+
+.title-container h1 {
+    margin: 0 20px; /* Ajusta el espacio entre las líneas y el título */
+    white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+}
+
+.line {
+    flex-grow: 1; /* Hace que la línea se expanda para ocupar el espacio disponible */
+    border: 0;
+    height: 1px; /* Altura de la línea */
+    background-color: #000; /* Color de la línea */
+}

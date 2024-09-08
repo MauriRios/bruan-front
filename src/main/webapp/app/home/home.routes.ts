@@ -4,6 +4,7 @@ import { AboutUsComponent } from '../shared/components/about-us/about-us.compone
 import { NgModule } from '@angular/core';
 import { NavbarHomeComponent } from 'app/shared/components/navbar-home/navbar-home.component';
 import { FooterHomeComponent } from 'app/shared/components/footer/footer.component';
+import { DynamicCategoriesComponent } from 'app/shared/components/dynamic-categories/dynamic-categories/dynamic-categories.component';
 
 export const HOME_ROUTES: Routes = [ 
     {
@@ -29,6 +30,8 @@ export const HOME_ROUTES: Routes = [
         path: 'about',
         component: AboutUsComponent,
     },
+    { path: 'categoria/:categoria',
+         component: DynamicCategoriesComponent },
 
 ];
 

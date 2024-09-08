@@ -26,6 +26,10 @@ export class DynamicCategoriesComponent implements OnInit {
     
   ) {}
 
+
+  //TODO refactorizar para que se envie id de categoria y no el string, crear nueva variable para obtener 
+  //la categoria de la url y de ahi pasar buscar en las categorias cargadas el id de ese string y psarlo como category
+
   ngOnInit(): void {
     // Obtener el parámetro de la categoría desde la ruta
     this.route.params.subscribe(params => {

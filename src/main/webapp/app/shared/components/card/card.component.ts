@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable @typescript-eslint/prefer-nullish-coalescing */
 /* eslint-disable @typescript-eslint/no-unnecessary-condition */
 /* eslint-disable no-console */
@@ -190,6 +191,10 @@ export class ProductCardComponent implements OnInit, OnChanges {
   getCategoryName(categoryId: number): string {
     const category = this.categories.find(cat => cat.id === categoryId);
     return category?.categoryName || 'Categoría no encontrada';
+  }
+
+  navigateToUrl() {
+    window.open('https://wa.me/c/5491126786057', '_blank');
   }
 
   public getImageSrc(product: IProduct): string | undefined {

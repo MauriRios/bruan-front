@@ -8,12 +8,13 @@ import { IProduct } from 'app/entities/product/product.model';
 import { AnimationTranslateTopHoverDirective } from "app/shared/directives/animation-translate-top-hover.directive";
 import { FilterByPipe } from "app/shared/pipes/filterBy/filter-by.pipe";
 import { NgxPaginationModule } from "ngx-pagination";
+import { LineTitleDirective } from "app/shared/directives/line-title.directive";
 
 
 @Component({
   selector: 'app-product-card',
   standalone: true,
-  imports: [ CommonModule, AnimationTranslateTopHoverDirective, NgxPaginationModule, FilterByPipe, FormsModule ],
+  imports: [ CommonModule, AnimationTranslateTopHoverDirective, NgxPaginationModule, FilterByPipe, FormsModule, LineTitleDirective ],
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
@@ -21,6 +22,7 @@ export class ProductCardComponent implements OnInit {
 
   products: IProduct[] = [];
   filteredProducts: IProduct[] = [];
+  
 
   public page!: number;
   

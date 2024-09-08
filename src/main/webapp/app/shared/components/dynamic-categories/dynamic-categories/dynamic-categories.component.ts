@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DynamicVerticalCardComponent } from '../../dynamic-vertical-card/dynamic-vertical-card/dynamic-vertical-card.component';
 import { LineTitleDirective } from 'app/shared/directives/line-title.directive';
+import { ProductCardComponent } from '../../card/card.component';
 
 @Component({
   selector: 'dynamic-categories',
   standalone: true,
-  imports: [DynamicVerticalCardComponent, LineTitleDirective],
+  imports: [DynamicVerticalCardComponent, LineTitleDirective, ProductCardComponent],
   templateUrl: './dynamic-categories.component.html',
   styleUrl: './dynamic-categories.component.css'
 })

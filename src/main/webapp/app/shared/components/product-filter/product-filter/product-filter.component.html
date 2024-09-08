@@ -1,0 +1,29 @@
+<div class="filter-container">
+    <div class="form-group">
+      <label for="product-name">Filtrar por nombre</label>
+      <input
+        id="product-name"
+        type="text"
+        class="form-control"
+        placeholder="Filtrar por nombre..."
+        [(ngModel)]="productName"
+        (ngModelChange)="onFilterNameChange()"
+      />
+    </div>
+  
+    <div class="form-group">
+        <label for="category-select">Categoría</label>
+        <select
+          id="category-select"
+          class="form-control"
+          [(ngModel)]="selectedCategory"
+          (change)="onFilterCategoryChange()"
+        >
+          <option value="">Todas las categorías</option>
+          <option *ngFor="let category of categories" [value]="category.id">{{ category.categoryName }}</option>
+        </select>
+      </div>
+  </div>
+  
+  
+  

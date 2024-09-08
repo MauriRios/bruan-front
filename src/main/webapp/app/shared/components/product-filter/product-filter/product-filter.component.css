@@ -1,0 +1,15 @@
+.filter-container select.form-control {
+    height: 38px; /* Asegura que la altura del select sea la misma que el input */
+    padding: 6px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+.filter-container select.form-control {
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgdmlld0JveD0iMCAwIDE2IDE2Ij4gPHBhdGggZD0iTTEuNjU3IDMuMjA3bDcuMzQyIDcuMzQyIDcuMzQyLTcuMzQySDEuNjU3ek0uNzggNEwxMiAxMy4yMnYxLjAySDEuMTlMMi42NTcgNC4wN2wtMS44ODItMS44ODMgNy4zNDItNy4zNDIgNy4zNDIgNy4zNDItNy4zNDIgNy4zNDItMS44ODMgMS44ODIgMy41MDIgMy41MDItNy4zNDIgNy4zNDItNy4zNDItNy4zNDJ6IiBmaWxsPSIjODg4ODg4Ii8+IDwvc3ZnPg==') no-repeat right 0.75rem center/12px 12px;
+    background-color: white;
+  }
+  

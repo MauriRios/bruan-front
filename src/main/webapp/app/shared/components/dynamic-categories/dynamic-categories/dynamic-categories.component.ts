@@ -30,39 +30,37 @@ export class DynamicCategoriesComponent implements OnInit {
     // Obtener el parámetro de la categoría desde la ruta
     this.route.params.subscribe(params => {
       this.category = params['categoria']; // Ejemplo: la categoría en la URL
-      this.filtrarProductosPorCategoria(this.category);
+      this.filterProductByCategory(this.category);
     });
   }
 
 
-  filtrarProductosPorCategoria(category: string) {
+  filterProductByCategory(category: string) {
     // Lógica de filtrado según la categoría
     if (category === 'cumpleaños') {
       this.title = '¡Feliz Cumpleaños!';
       this.description = 'Celebra un año más con alegría.';
-      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Cambia según la imagen de tu base de datos
-    } else if (category === 'desayunos') {
+      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; 
       this.title = 'Desayunos Deliciosos';
       this.description = 'Comienza tu mañana con algo delicioso.';
-      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Cambia según la imagen
+      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; 
     } else if (category === 'fechas-especiales') {
       this.title = 'Fechas Especiales';
       this.description = 'Celebra los momentos más importantes.';
-      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Imagen asociada
+      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; 
     } else if (category === 'otros') {
       this.title = 'Otros';
       this.description = 'No se encontraron productos para esta categoría.';
-      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Imagen por defecto
+      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg';
     } else if (category === 'packaging') {
       this.title = 'Packaging';
       this.description = 'No se encontraron productos para esta categoría.';
-      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Imagen por defecto
+      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; 
     } else {
       this.title = 'Todas las categorías';
       this.description = 'No se encontraron productos para esta categoría.';
       this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Imagen por defecto
     }
-    console.log(this.category);
     
   }
 

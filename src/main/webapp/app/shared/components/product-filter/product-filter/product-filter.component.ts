@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ICategory } from 'app/entities/category/category.model';
 import { CategoryService } from 'app/entities/category/service/category.service';
@@ -16,10 +16,9 @@ export class ProductFilterComponent implements OnInit{
   
   @Output() filterNameChange = new EventEmitter<string>();
   @Output() filterCategoryChange = new EventEmitter<string>();
+  @Input() selectedCategory: string = '';  // Recibe la categoría desde el padre
 
   productName: string = '';
-  selectedCategory: string = ''; // Categoría por defecto, 'all' para representar todas
-
   categories: ICategory[] = [];
 
   constructor(
@@ -30,7 +29,7 @@ export class ProductFilterComponent implements OnInit{
 
   ngOnInit(): void {
     this.loadCategories();
-    console.log(this.categories);
+    console.log(this.selectedCategory);
     
   }
 

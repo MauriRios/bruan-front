@@ -1,9 +1,12 @@
+/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DynamicVerticalCardComponent } from '../../dynamic-vertical-card/dynamic-vertical-card/dynamic-vertical-card.component';
 import { LineTitleDirective } from 'app/shared/directives/line-title.directive';
 import { ProductCardComponent } from '../../card/card.component';
+import { ICategory } from 'app/entities/category/category.model';
+import { CategoryService } from 'app/entities/category/service/category.service';
 
 @Component({
   selector: 'dynamic-categories',
@@ -13,44 +16,56 @@ import { ProductCardComponent } from '../../card/card.component';
   styleUrl: './dynamic-categories.component.css'
 })
 export class DynamicCategoriesComponent implements OnInit {
-  categoria: string = '';
-  titulo: string = '';
-  descripcion: string = '';
-  imagen: string = '';
+  category: any = '';
+  title: string = '';
+  description: string = '';
+  image: string = '';
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    
+  ) {}
 
   ngOnInit(): void {
     // Obtener el parámetro de la categoría desde la ruta
     this.route.params.subscribe(params => {
-      this.categoria = params['categoria']; // Ejemplo: la categoría en la URL
-      this.filtrarProductosPorCategoria(this.categoria);
+      this.category = params['categoria']; // Ejemplo: la categoría en la URL
+      this.filtrarProductosPorCategoria(this.category);
     });
   }
 
-  filtrarProductosPorCategoria(categoria: string) {
+
+  filtrarProductosPorCategoria(category: string) {
     // Lógica de filtrado según la categoría
-    if (categoria === 'cumpleaños') {
-      this.titulo = '¡Feliz Cumpleaños!';
-      this.descripcion = 'Celebra un año más con alegría.';
-      this.imagen = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Cambia según la imagen de tu base de datos
-    } else if (categoria === 'desayunos') {
-      this.titulo = 'Desayunos Deliciosos';
-      this.descripcion = 'Comienza tu mañana con algo delicioso.';
-      this.imagen = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Cambia según la imagen
-    } else if (categoria === 'fechas-especiales') {
-      this.titulo = 'Fechas Especiales';
-      this.descripcion = 'Celebra los momentos más importantes.';
-      this.imagen = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Imagen asociada
-    } else if (categoria === 'otros') {
-      this.titulo = 'Otros';
-      this.descripcion = 'No se encontraron productos para esta categoría.';
-      this.imagen = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Imagen por defecto
-    } else if (categoria === 'packaging') {
-      this.titulo = 'Packaging';
-      this.descripcion = 'No se encontraron productos para esta categoría.';
-      this.imagen = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Imagen por defecto
-    } 
+    if (category === 'cumpleaños') {
+      this.title = '¡Feliz Cumpleaños!';
+      this.description = 'Celebra un año más con alegría.';
+      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Cambia según la imagen de tu base de datos
+    } else if (category === 'desayunos') {
+      this.title = 'Desayunos Deliciosos';
+      this.description = 'Comienza tu mañana con algo delicioso.';
+      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Cambia según la imagen
+    } else if (category === 'fechas-especiales') {
+      this.title = 'Fechas Especiales';
+      this.description = 'Celebra los momentos más importantes.';
+      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Imagen asociada
+    } else if (category === 'otros') {
+      this.title = 'Otros';
+      this.description = 'No se encontraron productos para esta categoría.';
+      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Imagen por defecto
+    } else if (category === 'packaging') {
+      this.title = 'Packaging';
+      this.description = 'No se encontraron productos para esta categoría.';
+      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Imagen por defecto
+    } else {
+      this.title = 'Todas las categorías';
+      this.description = 'No se encontraron productos para esta categoría.';
+      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Imagen por defecto
+    }
+    console.log(this.category);
+    
   }
+
+
 
 }

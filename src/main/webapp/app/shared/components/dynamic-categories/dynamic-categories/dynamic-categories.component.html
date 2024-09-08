@@ -1,20 +1,18 @@
 <div class="container-fluid">
     <div class="category-section">
-        <h1 LineTitle>• {{ titulo }} •</h1>
+        <h1 LineTitle>• {{ title }} •</h1>
       </div>
       
     <div class="col-12 justify-content-center">
         <dynamic-vertical-card
-          [titulo]="titulo"
-          [descripcion]="descripcion"
-          [imagen]="imagen">
+          [titulo]="title"
+          [descripcion]="description"
+          [imagen]="image">
         </dynamic-vertical-card>
     </div>
 </div>
 <div>
-    <app-product-card>
-    
-    </app-product-card>
+    <app-product-card [selectedCategory]="category"></app-product-card>
 </div>
 
   

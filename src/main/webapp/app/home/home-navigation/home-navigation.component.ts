@@ -4,6 +4,7 @@ import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { ProductCardComponent } from "app/shared/components/card/card.component";
+import { DynamicCategoriesComponent } from "app/shared/components/dynamic-categories/dynamic-categories/dynamic-categories.component";
 import { FollowUsComponent } from "app/shared/components/follow-us/follow-us.component";
 import { SliderComponent } from "app/shared/components/slider/slider.component";
 import { LineTitleDirective } from "app/shared/directives/line-title.directive";
@@ -14,7 +15,7 @@ import { LineTitleDirective } from "app/shared/directives/line-title.directive";
     standalone: true,
     templateUrl: './home-navigation.component.html',
     styleUrl: './home-navigation.component.css',
-    imports: [CommonModule, RouterModule, SliderComponent, ProductCardComponent, FollowUsComponent, LineTitleDirective ]
+    imports: [CommonModule, RouterModule, SliderComponent, ProductCardComponent, FollowUsComponent, LineTitleDirective, DynamicCategoriesComponent ]
 })
 export class HomeNavigationComponent implements OnInit {
 

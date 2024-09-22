@@ -45,6 +45,7 @@ export class DynamicCategoriesComponent implements OnInit {
       this.title = '¡Feliz Cumpleaños!';
       this.description = 'Celebra un año más con alegría.';
       this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; 
+    } else if (category === 'desayunos') {
       this.title = 'Desayunos Deliciosos';
       this.description = 'Comienza tu mañana con algo delicioso.';
       this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; 
@@ -63,7 +64,7 @@ export class DynamicCategoriesComponent implements OnInit {
     } else {
       this.title = 'Todas las categorías';
       this.description = 'No se encontraron productos para esta categoría.';
-      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; // Imagen por defecto
+      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg';
     }
     
   }

@@ -3,7 +3,7 @@ function setupProxy({ tls }) {
   const conf = [
     {
       context: serverResources,
-      target: `http${tls ? 's' : ''}://145.223.73.47:8080`,
+      target: `http${tls ? 's' : ''}://creacionesbruan.shop:8080`,
       secure: false,
       changeOrigin: tls,
     },

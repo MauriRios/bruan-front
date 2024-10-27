@@ -2,7 +2,7 @@
     width: 100%; /* Tamaño estático de la tarjeta */
     height: 500px; /* Altura fija */
     border-radius: 15px; /* Bordes redondeados */
-    margin: 20px; /* Espacio entre tarjetas */
+    margin: 0px; /* Espacio entre tarjetas */
     position: relative; /* Necesario para posicionar elementos absolutos dentro */
     overflow: hidden; /* Para evitar que el contenido desborde la tarjeta */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */

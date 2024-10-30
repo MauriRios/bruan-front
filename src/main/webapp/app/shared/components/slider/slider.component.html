@@ -1,7 +1,7 @@
-<div id="carousel" class="carousel carousel-dark slide container-custom" data-bs-ride="carousel">
+<div id="carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     @for (sliderConfiguration of sliderConfigurations; track sliderConfiguration; let idx = $index) {
-      <div  class="carousel-item" [ngClass]="{'active': idx === 0}" data-bs-interval="10000">
+      <div class="carousel-item" [ngClass]="{'active': idx === 0}" data-bs-interval="10000">
           <img [src]="getImageSrc(sliderConfiguration)" alt="Product Image">
           <div class="carousel-caption d-none d-md-block">
               <h5>{{ sliderConfiguration.sliderName }}</h5>

@@ -43,27 +43,27 @@ export class DynamicCategoriesComponent implements OnInit {
     // Lógica de filtrado según la categoría
     if (category === 'cumpleaños') {
       this.title = '¡Feliz Cumpleaños!';
-      this.description = 'Celebra un año más con alegría.';
+      this.description = 'Celebra un año más con alegría y personalízalo como quieras!';
       this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; 
     } else if (category === 'desayunos') {
       this.title = 'Desayunos Deliciosos';
       this.description = 'Comienza tu mañana con algo delicioso.';
-      this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; 
+      this.image = 'https://github.com/MauriRios/bruan-front/blob/develop/src/main/webapp/assets/images/desayunos.jpg'; 
     } else if (category === 'fechas-especiales') {
       this.title = 'Fechas Especiales';
-      this.description = 'Celebra los momentos más importantes.';
+      this.description = '¿Fechas Especiales? CreacionesBruan tiene todo para esos días! Celebra los momentos más importantes de la mejor manera';
       this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; 
     } else if (category === 'otros') {
       this.title = 'Otros';
-      this.description = 'No se encontraron productos para esta categoría.';
+      this.description = 'Otros productos que seguro te van a gustar!. Lo que no encuentras en otras categorías podría esta aquí, animate a explorar todo nuestro contenido!';
       this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg';
     } else if (category === 'packaging') {
       this.title = 'Packaging';
-      this.description = 'No se encontraron productos para esta categoría.';
+      this.description = 'No te quedes sin personalizar tus regalos, encuentra lo que buscas a tu medida';
       this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; 
     } else {
       this.title = 'Todas las categorías';
-      this.description = 'No se encontraron productos para esta categoría.';
+      this.description = 'Todas las categorías en un solo lugar, no te pierdas nada! Aca podes ver todo lo que ofrecemos para tus días especiales, negocio o decoración de tu hogar';
       this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg';
     }
     

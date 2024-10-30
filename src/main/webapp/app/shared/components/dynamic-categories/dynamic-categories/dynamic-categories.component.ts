@@ -50,7 +50,7 @@ export class DynamicCategoriesComponent implements OnInit {
     //   this.title = 'Desayunos Deliciosos';
     //   this.description = 'Comienza tu mañana con algo delicioso.';
     //   this.image = 'assets/images/desayunos.jpg'; 
-    //} 
+    // }
     else if (category === 'fechas-especiales') {
       this.title = 'Fechas Especiales';
       this.description = '¿Fechas Especiales? CreacionesBruan tiene todo para esos días! Celebra los momentos más importantes de la mejor manera';

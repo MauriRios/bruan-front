@@ -45,11 +45,13 @@ export class DynamicCategoriesComponent implements OnInit {
       this.title = '¡Feliz Cumpleaños!';
       this.description = 'Celebra un año más con alegría y personalízalo como quieras!';
       this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; 
-    } else if (category === 'desayunos') {
-      this.title = 'Desayunos Deliciosos';
-      this.description = 'Comienza tu mañana con algo delicioso.';
-      this.image = 'https://github.com/MauriRios/bruan-front/blob/develop/src/main/webapp/assets/images/desayunos.jpg'; 
-    } else if (category === 'fechas-especiales') {
+    } 
+    // else if (category === 'desayunos') {
+    //   this.title = 'Desayunos Deliciosos';
+    //   this.description = 'Comienza tu mañana con algo delicioso.';
+    //   this.image = 'assets/images/desayunos.jpg'; 
+    //} 
+    else if (category === 'fechas-especiales') {
       this.title = 'Fechas Especiales';
       this.description = '¿Fechas Especiales? CreacionesBruan tiene todo para esos días! Celebra los momentos más importantes de la mejor manera';
       this.image = 'https://img.freepik.com/fotos-premium/abstracto-gotas-llama-brillante-iluminacion-electrica-ia-generativa_1038396-44.jpg'; 
